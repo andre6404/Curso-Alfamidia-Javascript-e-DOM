@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function principal() {
+            var msg = prompt("digite sua mensagem");
+            var elemento = document.getElementById("mensagem");
+            elemento.innerHTML = msg;
+        }
+    </script>
+</head>
+<!--uso do onmouseover e onclick-->
+<body>
+    <p onmouseover="principal()">mover o mouse para cá</p>
+    <p onclick="principal()">clicar aqui</p>
+    <p id=mensagem></p>
+</body>
+</html>
