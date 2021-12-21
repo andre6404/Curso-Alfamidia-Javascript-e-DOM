@@ -10,9 +10,24 @@
             var peso = document.getElementById("peso").value;
             var altura = document.getElementById("altura").value;
             var selecao = document.getElementById("selecao").value;
-            alert(peso);
-            alert(altura);
-            alert(selecao);
+            var imc = peso / (altura * altura);
+            var classificacao = "";
+            if (imc < 18.5) {
+                classificacao = "Abaixo do Peso";
+            } else if (imc < 25) {
+                classificacao = "Peso Normal";
+            } else if (imc < 30) {
+                classificacao = "Sobrepeso";
+            } else if (imc < 35) {
+                classificacao = "Obesidade Grau I";
+            } else if (imc < 40) {
+                classificacao = "Obesidade Grau II";
+            } else {
+                classificação = "Obesidade Grau III ou Mórbida";
+            }
+            alert(imc);
+            alert(classificacao);
+            
         }
     </script>
 
@@ -32,7 +47,7 @@
             <option value="2">Classificação</option>
             <option value="3">Valor e Classificação</option>
         </select>
-        <br>
+        <br><br>
         <input type="button" value="Enviar" onclick="calculoIMC()">
 
     </form>
