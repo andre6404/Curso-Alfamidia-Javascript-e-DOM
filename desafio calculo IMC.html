@@ -11,6 +11,8 @@
             var altura = document.getElementById("altura").value;
             var selecao = document.getElementById("selecao").value;
             var imc = peso / (altura * altura);
+            var elementoResultado = document.getElementById("resultado");
+            elementoResultado.innerHtml = imc;
             var classificacao = "";
             if (imc < 18.5) {
                 classificacao = "Abaixo do Peso";
@@ -25,8 +27,7 @@
             } else {
                 classificação = "Obesidade Grau III ou Mórbida";
             }
-            alert(imc);
-            alert(classificacao);
+           
             
         }
     </script>
@@ -34,11 +35,11 @@
 </head>
 <body>
     <form>
-        Peso
+        Peso (em Kg)
         <br>
         <input name="peso" id="peso">
         <br><br>
-        Altura
+        Altura (em metros)
         <br>
         <input name="altura" id="altura">
         <br><br>
@@ -51,6 +52,9 @@
         <input type="button" value="Enviar" onclick="calculoIMC()">
 
     </form>
+    <p>
+        <p id="resultado"></p>
+    </p>
     
 </body>
 </html>
