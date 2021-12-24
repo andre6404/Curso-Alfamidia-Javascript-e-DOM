@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+	<script>
+
+		function processarArray() {
+			var array1 = [1,9,5,3,7];
+
+			document.write("array1==>" + array1);
+			document.write("<br><br>");
+
+			array1.push(4);
+			document.write("array1 após push(4)==> " + array1);
+			document.write("<br><br>");
+
+			document.write("mostra e tira o último elemento do array1 com o pop()==>" + array1.pop());
+			document.write("<br>");
+			document.write("array1 após o pop()==>" + array1);
+			document.write("<br><br>");
+
+			array1.unshift(2);
+			document.write("mostra a array1 após o unshift(2)==> " + array1);
+			document.write("<br><br>");
+
+			document.write("mostra o shift(), que tira o primeiro do array==> " + array1.shift());
+			document.write("<br>");
+			document.write("array após o shift==> " + array1);
+			document.write("<br><br>");
+
+			array1.reverse();
+			document.write("mostra a array após o reverse==> " + array1);
+			document.write("<br><br>");
+
+			array1.sort();
+			document.write("mostra a array após o sort==> " + array1);
+
+
+		}
+
+	</script>
+  </head>
+  <body onload="processarArray()">
+  <p>Necessário abrir o console para ver as mensagens</p>
+</html>
